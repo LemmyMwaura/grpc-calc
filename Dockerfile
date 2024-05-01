@@ -4,7 +4,7 @@ WORKDIR /app
 
 ADD . /app
 
-RUN go build -o bin/server server/main.go
+RUN go build -o bin/server main.go
 
 FROM debian:bookworm-slim
 

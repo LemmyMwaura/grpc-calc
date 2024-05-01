@@ -9,6 +9,8 @@ service Calculator {
   rpc Subtract(CalculationRequest) returns (CalculationResponse);
   rpc Divide(CalculationRequest) returns (CalculationResponse);
   rpc Multiply(CalculationRequest) returns (CalculationResponse);
+  rpc Sum(NumbersRequest) returns (CalculationResponse);
+
 }
 
 message CalculationRequest {
@@ -16,11 +18,6 @@ message CalculationRequest {
   int64 b = 2;
 }
 
-message CalculationResponse {
-  int64 result = 1;
-}
+message CalculationResponse { int64 result = 1; }
 
-message Error {
-  int64 result = 1;
-  string msg =2;
-}
+message NumbersRequest { repeated int64 numbers = 1; }
