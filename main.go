@@ -5,7 +5,7 @@ import (
 	"net"
 
 	"github.com/LemmyMwaura/grpccalc/pb"
-	"github.com/LemmyMwaura/grpccalc/server"
+	calcserver "github.com/LemmyMwaura/grpccalc/server"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

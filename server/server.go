@@ -12,6 +12,10 @@ type CalcServer struct {
 	pb.UnimplementedCalculatorServer
 }
 
+func NewCalcServer() *CalcServer {
+	return &CalcServer{}
+}
+
 func (s *CalcServer) Add(ctx context.Context, in *pb.CalculationRequest) (*pb.CalculationResponse, error) {
 	return &pb.CalculationResponse{
 		Result: in.A + in.B,
@@ -50,8 +54,4 @@ func (s *CalcServer) Sum(ctx context.Context, in *pb.NumbersRequest) (*pb.Calcul
 	return &pb.CalculationResponse{
 		Result: sum,
 	}, nil
-}
-
-func NewCalcServer() *CalcServer {
-	return &CalcServer{}
 }
