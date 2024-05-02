@@ -4,8 +4,8 @@ import (
 	"log"
 	"net"
 
+	"github.com/LemmyMwaura/grpccalc/calcserver"
 	"github.com/LemmyMwaura/grpccalc/pb"
-	calcserver "github.com/LemmyMwaura/grpccalc/server"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
